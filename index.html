@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taha Mtira | Developer & AI-Powered Creator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    
+    .skill-bar {
+      height: 6px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 3px;
+      transition: width 2s ease-in-out;
+    }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .typing-animation {
+      border-right: 2px solid #667eea;
+      animation: blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #667eea }
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) }
+      50% { transform: translateY(-10px) }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-gray-900/90 backdrop-blur-sm z-50 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-xl font-bold gradient-bg bg-clip-text text-transparent">Taha Mtira</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+          <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+          <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+        </div>
+        <button class="md:hidden">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center gradient-bg">
+    <div class="text-center px-4">
+      <div class="floating mb-8">
+        <div class="w-32 h-32 bg-gray-800 rounded-full mx-auto flex items-center justify-center text-4xl">
+          <i class="fas fa-code text-blue-400"></i>
+        </div>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">Taha Mtira</h1>
+      <div class="text-xl md:text-2xl mb-8 h-8 overflow-hidden">
+        <p id="typing-text" class="typing-animation inline-block"></p>
+      </div>
+      <a href="#about" class="inline-block bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors">
+        Discover My Work
+      </a>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto py-10 px-4">
+    <!-- About Section -->
+    <section id="about" class="mt-20 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">About Me</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+      </div>
+      <div class="bg-gray-800 rounded-lg p-8 card-hover">
+        <p class="text-gray-300 leading-relaxed text-lg">
+          I'm deeply passionate about development and coding. With a strong command of AI tools and development frameworks, I build powerful, fast, and high-quality websites, applications, and logos. I can code a full dynamic website in one day — including logos, e-commerce systems, portfolios, or blogs. I also build apps and tools like my productivity app Vault, and I confidently deliver services that exceed expectations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="mt-20 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Skills & Expertise</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-code text-blue-400 mr-3"></i>
+            Technical Skills
+          </h3>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>Web Development</span>
+                <span>95%</span>
+              </div>
+              <div class="bg-gray-700 rounded-full h-2">
+                <div class="skill-bar" style="width: 95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>AI Integration</span>
+                <span>90%</span>
+              </div>
+              <div class="bg-gray-700 rounded-full h-2">
+                <div class="skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>App Development</span>
+                <span>85%</span>
+              </div>
+              <div class="bg-gray-700 rounded-full h-2">
+                <div class="skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span>Logo Design</span>
+                <span>88%</span>
+              </div>
+              <div class="bg-gray-700 rounded-full h-2">
+                <div class="skill-bar" style="width: 88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <h3 class="text-xl font-semibold mb-4 flex items-center">
+            <i class="fas fa-tools text-blue-400 mr-3"></i>
+            Services
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-globe text-blue-400 mr-3"></i>
+              <span>Full Website Creation (static & dynamic)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-robot text-blue-400 mr-3"></i>
+              <span>AI-Powered Development and Automation</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-palette text-blue-400 mr-3"></i>
+              <span>High-Resolution Logo Design</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-shopping-cart text-blue-400 mr-3"></i>
+              <span>E-commerce Setup (Custom or Shopify)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-language text-blue-400 mr-3"></i>
+              <span>Translation (Arabic, French, English)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-mobile-alt text-blue-400 mr-3"></i>
+              <span>App Development (including my Vault app)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mt-20 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Live Projects</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-gamepad text-blue-400 mr-3 text-2xl"></i>
+            <h3 class="text-xl font-semibold">GameFox</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Gaming products platform with modern design and smooth user experience.</p>
+          <a href="https://gamefox.store" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            View Project <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-laptop-code text-blue-400 mr-3 text-2xl"></i>
+            <h3 class="text-xl font-semibold">Tech Empire</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Tech blog featuring latest technology news and insights.</p>
+          <a href="https://techempire.website" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            View Project <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-futbol text-blue-400 mr-3 text-2xl"></i>
+            <h3 class="text-xl font-semibold">Football Empire</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Football news platform with live updates and match analysis.</p>
+          <a href="https://football-empire.github.io" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            View Project <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-fist-raised text-blue-400 mr-3 text-2xl"></i>
+            <h3 class="text-xl font-semibold">UFC Empire</h3>
+          </div>
+          <p class="text-gray-300 mb-4">UFC fan site with fighter stats and match predictions.</p>
+          <a href="https://ufc-empire.github.io" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            View Project <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-6 card-hover">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-store text-blue-400 mr-3 text-2xl"></i>
+            <h3 class="text-xl font-semibold">NovaMart (Demo)</h3>
+          </div>
+          <p class="text-gray-300 mb-4">E-commerce demo showcasing modern shopping experience.</p>
+          <a href="https://novamart-demo.github.io" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+            View Project <i class="fas fa-external-link-alt ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured App Section -->
+    <section class="mt-20 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Featured App</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+      </div>
+      <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 card-hover">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <!-- Left side - App Info -->
+          <div>
+            <div class="flex items-center mb-6">
+              <i class="fas fa-vault text-white mr-4 text-3xl"></i>
+              <h3 class="text-3xl font-bold text-white">Vault</h3>
+            </div>
+            <p class="text-white/90 text-lg mb-6">
+              A powerful all-in-one productivity app that helps you stay focused, manage tasks, and integrate AI features into your daily workflow. Available now for just $10–20.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">Productivity</span>
+              <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">AI-Powered</span>
+              <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">Task Management</span>
+              <span class="bg-white/20 text-white px-4 py-2 rounded-full text-sm">Focus Tools</span>
+            </div>
+          </div>
+          
+          <!-- Right side - Swiper -->
+          <div>
+            <div class="swiper vault-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="vault/2627af38d2ed41f19b81e486f3c2b933.jpg" alt="Vault App Screenshot 1" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/430aad7f455b4497a92de184d7ef17b2.jpg" alt="Vault App Screenshot 2" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/46a49da38cdb4c5fa7946d55abef2e13.jpg" alt="Vault App Screenshot 3" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/7985dbd9f47a4a0ca95c57fb25a7f3bb.jpg" alt="Vault App Screenshot 4" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/79b33bdd94eb433fa37900c54b9d6226.jpg" alt="Vault App Screenshot 5" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/cfed68d00a214a3d8661d6728e97c637.jpg" alt="Vault App Screenshot 6" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/d9f82ef93f314f23aa5ba1659c12a37a.jpg" alt="Vault App Screenshot 7" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/eeeea8a431d140fabf03a44a6a070b2e.jpg" alt="Vault App Screenshot 8" class="w-full h-64 object-cover rounded-lg">
+                </div>
+                <div class="swiper-slide">
+                  <img src="vault/fb4af9d9eb7945ea8f966efc9a156e6c.jpg" alt="Vault App Screenshot 9" class="w-full h-64 object-cover rounded-lg">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mt-20 fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+        <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-gray-800 rounded-lg p-8 card-hover">
+          <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-blue-400 mr-4 text-xl"></i>
+              <div>
+                <p class="text-gray-300">Email</p>
+                <a href="mailto:emperialcoder@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">emperialcoder@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fab fa-whatsapp text-blue-400 mr-4 text-xl"></i>
+              <div>
+                <p class="text-gray-300">WhatsApp</p>
+                <a href="https://wa.me/21621951337" class="text-blue-400 hover:text-blue-300 transition-colors">+216 21951337</a>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock text-blue-400 mr-4 text-xl"></i>
+              <div>
+                <p class="text-gray-300">Response Time</p>
+                <p class="text-white">Usually within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg p-8 card-hover">
+          <h3 class="text-2xl font-semibold mb-6">Send a Message</h3>
+          <form id="contactForm" class="space-y-4">
+            <div>
+              <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+              <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required class="w-full bg-gray-700 text-white p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            </div>
+            <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+              <span class="submit-text">Send Message</span>
+              <i class="fas fa-spinner fa-spin submit-spinner hidden ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-20 text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-blue-400 transition-colors">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition-colors">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition-colors">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="#" class="hover:text-blue-400 transition-colors">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Taha Mtira — All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Typing animation loop
+    const typingText = document.getElementById('typing-text');
+    const texts = [
+      'AI-Enhanced Web Developer & Designer',
+      'Full-Stack Developer',
+      'AI Integration Specialist',
+      'Mobile App Developer',
+      'Logo Designer',
+      'E-commerce Solutions Expert'
+    ];
+    let currentTextIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    
+    function typeText() {
+      const currentText = texts[currentTextIndex];
+      
+      if (isDeleting) {
+        typingText.textContent = currentText.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+        
+        if (currentCharIndex === 0) {
+          isDeleting = false;
+          currentTextIndex = (currentTextIndex + 1) % texts.length;
+          setTimeout(typeText, 500);
+        } else {
+          setTimeout(typeText, 50);
+        }
+      } else {
+        typingText.textContent = currentText.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+        
+        if (currentCharIndex === currentText.length) {
+          isDeleting = true;
+          setTimeout(typeText, 2000);
+        } else {
+          setTimeout(typeText, 100);
+        }
+      }
+    }
+    
+    // Start typing animation
+    typeText();
+
+    // Initialize Swiper
+    const swiper = new Swiper('.vault-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Fade in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Animate skill bars when they come into view
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const skillBars = entry.target.querySelectorAll('.skill-bar');
+          skillBars.forEach(bar => {
+            bar.style.width = bar.style.width; // Trigger animation
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('#skills').forEach(el => {
+      skillObserver.observe(el);
+    });
+
+    // Functional contact form
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const submitButton = this.querySelector('button[type="submit"]');
+      const submitText = submitButton.querySelector('.submit-text');
+      const submitSpinner = submitButton.querySelector('.submit-spinner');
+      
+      // Show loading state
+      submitText.textContent = 'Sending...';
+      submitSpinner.classList.remove('hidden');
+      submitButton.disabled = true;
+      
+      // Get form data
+      const formData = new FormData(this);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+      
+      try {
+        // Create email body
+        const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+        
+        // Open email client with pre-filled content
+        window.location.href = `mailto:emperialcoder@gmail.com?subject=Portfolio Contact Form&body=${emailBody}`;
+        
+        // Reset form after a delay
+        setTimeout(() => {
+          this.reset();
+          submitText.textContent = 'Send Message';
+          submitSpinner.classList.add('hidden');
+          submitButton.disabled = false;
+          
+          // Show success message
+          const successMessage = document.createElement('div');
+          successMessage.className = 'bg-green-600 text-white p-4 rounded-lg mt-4 text-center';
+          successMessage.textContent = 'Message prepared! Your email client should open shortly.';
+          this.appendChild(successMessage);
+          
+          setTimeout(() => {
+            successMessage.remove();
+          }, 3000);
+        }, 1000);
+        
+      } catch (error) {
+        console.error('Error:', error);
+        
+        // Reset button state
+        submitText.textContent = 'Send Message';
+        submitSpinner.classList.add('hidden');
+        submitButton.disabled = false;
+        
+        // Show error message
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'bg-red-600 text-white p-4 rounded-lg mt-4 text-center';
+        errorMessage.textContent = 'There was an error sending your message. Please try again.';
+        this.appendChild(errorMessage);
+        
+        setTimeout(() => {
+          errorMessage.remove();
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>
